@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { fetchImageData } from '../services/imageData';
 import { ImageGrid } from '../features/imageGrid/ImageGrid';
 import Spinner from 'react-bootstrap/Spinner';
+import { Container, Col, Row } from 'react-bootstrap';
 
 export default function Dashboard() {
   let navigate = useNavigate();
@@ -23,7 +24,7 @@ export default function Dashboard() {
     (async () => {
       setImagesLoaded(false);
 
-      await new Promise(resolve => setTimeout(resolve, 5000))
+      await new Promise(resolve => setTimeout(resolve, 2000))
       fetchImageData().then((res) => {
         setImages(res.data);
         setImagesLoaded(true);
@@ -32,17 +33,22 @@ export default function Dashboard() {
   }, []);
 
   return (
-    <main style={{ padding: "1rem 0" }}>
-      <h2>{name}</h2>
-      <button onClick={button_logout}>Logout</button>
-      <div >
-      {imagesLoaded ? (
-        <ImageGrid items={images}/>
-      ) : (
-        <Spinner animation="grow" role="status">
-        </Spinner>
-      )}
-    </div>
-    </main>
-  );
+    <div style={{height:"100vh", width:"100%",display:"flex", flexDirection:"row", justifyContent:"space-between", alignContent:"stretch"}}>
+      <div style={{flex: "3"}}>
+        <h2>{name}</h2>
+        <button onClick={button_logout}>Logout</button>
+      </div>
+
+      <div style={{flex:"7", overflow:"hidden"}} display="flex">
+        <div style={{ flex: '1 1 auto', height: "100%" }} >
+          {imagesLoaded ? (
+            <ImageGrid items={images}/>
+            ) : (
+              <Spinner animation="grow" role="status">
+              </Spinner>
+            )}
+        </div>
+      </div>
+    </div>    
+  )
 }
