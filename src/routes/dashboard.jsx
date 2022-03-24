@@ -7,6 +7,8 @@ import { fetchImageData } from '../services/imageData';
 import { ImageGrid } from '../features/imageGrid/ImageGrid';
 import Spinner from 'react-bootstrap/Spinner';
 import { Container, Col, Row } from 'react-bootstrap';
+import { saveState } from '../app/localStorage';
+import { store } from '../app/store';
 
 export default function Dashboard() {
   let navigate = useNavigate();
@@ -17,6 +19,7 @@ export default function Dashboard() {
 
   function button_logout(e) {
     dispatch(logout())
+    saveState(store.getState())
     navigate('/')
   }
 

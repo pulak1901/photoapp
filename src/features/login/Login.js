@@ -1,18 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { login } from './userSlice';
 import { useNavigate } from "react-router-dom";
+import { saveState } from '../../app/localStorage';
+import { store } from '../../app/store';
 
 export function Login() {
   let navigate = useNavigate();
   const dispatch = useDispatch();
   const [input, setInput] = useState('');
+  const name = useSelector((state) => state.user.name)
+
+  useEffect(() => {
+    if (name !== '') {
+      navigate("/dashboard")
+    }
+  })
 
   function handleSubmit(e) {
     e.preventDefault();
     
-    if (input != '') {
+    if (input !== '') {
         dispatch(login(input));
+        saveState(store.getState())
         navigate("/dashboard");
     }
   }
