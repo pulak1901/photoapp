@@ -21,6 +21,9 @@ export default function Dashboard() {
   }
 
   useEffect(() => {
+    if (name == '') {
+      navigate("/")
+    }
     (async () => {
       setImagesLoaded(false);
 
