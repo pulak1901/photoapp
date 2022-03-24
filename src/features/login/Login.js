@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { login } from './userSlice';
+import { useNavigate } from "react-router-dom";
 
 export function Login() {
+  let navigate = useNavigate();
   const dispatch = useDispatch();
   const [input, setInput] = useState('');
 
@@ -11,6 +13,7 @@ export function Login() {
     
     if (input != '') {
         dispatch(login(input));
+        navigate("/dashboard");
     }
   }
 
