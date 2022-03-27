@@ -1,0 +1,19 @@
+.ImageCardContainer {
+	width: 200px;
+	height: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.ImageCard {
+		cursor: pointer;
+		width: 150px;
+		height: 150px;
+		object-fit: contain;
+		transition: 0.3s;
+	
+		&:hover {
+			width: 160px;
+		}
+	}
+}

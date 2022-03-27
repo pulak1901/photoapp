@@ -1,0 +1,89 @@
+.AlbumButtonsListContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.AllPhotosButton {
+	margin: 8px 0px;
+	height: min-content;
+	width: min-content;
+	.AllPhotosButtonContents {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+	
+		& > p {
+			margin-left: 8px;
+			margin-bottom: 2px;
+		}
+	}
+}
+
+.CurrentAlbumButtonsListContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	.CurrentAlbumButtonsListHeader {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		max-width: min-content;
+		.Separator {
+			margin-top: 32px;
+		}
+		p {
+			margin: 0px 0px 8px 0px;
+			font-size: 20px;
+		}
+	}
+	.CurrentAlbumButtonsList {
+		display: flex;
+		flex-direction: row;
+		align-items: flex-end;
+		flex-wrap: wrap;
+		justify-content: center;
+		padding: 0 20vw;
+		.CurrentAlbumButtonGroup {
+			margin: 4px 8px;
+			.AlbumButton {
+				border-radius: 8px 0px 0px 8px;
+				p {
+					max-width: 10em;
+					overflow: hidden;
+					margin: 0;
+				}
+			}
+			.AlbumCloseButton {
+				border-left-style: none;
+				border-radius: 0px 8px 8px 0px;
+			}
+		}
+	}
+}
+
+.Separator {
+	width: 200px;
+	height: 2px;
+	background-color: black;
+	border-radius: 32px;
+	margin: 16px 0px;
+}
+
+.AddAlbumButton {
+	margin: 8px 0px;
+	div {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+	}
+	p {
+		margin: 0px;
+		font-size: 15px;
+	}
+	img {
+		padding: 4px;
+	}
+}

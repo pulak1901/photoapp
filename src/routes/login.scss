@@ -1,0 +1,63 @@
+#login {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+
+	.App-logo {
+		height: 40vmin;
+		pointer-events: none;
+	}
+}
+
+#login_form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	.field_container {
+		input {
+			margin: 8px;
+			padding: 8px;
+			border: 1px solid gainsboro;
+			border-radius: 8px;
+
+			&:focus {
+				border: 1px solid darkgray;
+				outline: none;
+			}
+		}
+	}
+	button {
+		margin: 8px 0px;
+		padding: 8px 16px;
+		width: max-content;
+		background-color: white;
+		border: 1px solid gainsboro;
+		border-radius: 8px;
+
+		&:hover {
+			border: 1px solid darkgray
+		}
+	}
+}
+  
+@media (prefers-reduced-motion: no-preference) {
+	.App-logo {
+		animation: App-logo-float infinite 3s ease-in-out;
+	}
+}
+  
+@keyframes App-logo-float {
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(10px);
+	}
+	100% {
+		transform: translateY(0px);
+	}
+}
+  

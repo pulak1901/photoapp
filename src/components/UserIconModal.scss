@@ -1,0 +1,23 @@
+.UserIconModal {
+	margin-top: 64px;
+	div {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		img {
+			width: 64px;
+			height: 64px;
+			margin: 16px;
+			transition: 0.3s;
+			max-height: 96px;
+			max-width: 96px;
+	
+			&:hover {
+				width: 80px;
+				height: 80px;
+			}
+		}
+	}
+}

@@ -1,0 +1,20 @@
+.ImageModalBody {
+	display: flex;
+	flex-direction: column;
+}
+
+.ImageModalAlbumGroup {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin-top: 16px;
+
+	button {
+		margin: 2px 2px !important;
+		border-radius: 0px;
+		p {
+			margin: 0;
+			overflow: hidden;
+		}
+	}
+}

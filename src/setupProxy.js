@@ -2,13 +2,15 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 
 module.exports = function(app) {
   app.use(
-    '/imageData',
+    '/api',
     createProxyMiddleware({
       target: 'https://jsonplaceholder.typicode.com/',
       changeOrigin: true,
+      logLevel: 'debug',
       pathRewrite: {
-          "^/imageData": "/photos"
+        "^/api/data": "/photos",
+        "^/api/image": "/photos"
       }
     })
-  );
-};
+  )
+}
