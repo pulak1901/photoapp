@@ -5,9 +5,15 @@ import { Button } from "react-bootstrap"
 import './AlbumsList.scss'
 import { ALL_PHOTOS_ALBUM_NAME } from '../utility/constants'
 
+/* Displays a selectable list of albums, with accompanying buttons to delete said albums
+ * Inputs:
+ *  - onAlbumSelected => ('') => {}
+ *  - onAlbumDelete => ('') => {}
+ *  - onAlbumAdd => ('') => {}
+ *  - currAlbum => ''
+ */
 export function AlbumsList(props) {
 	// current user is only required to get current list of albums
-	// TODO: perhaps load current albums into state.user?
   	const user = useSelector(state => state.user.currentUser)
   	const albums = useSelector(state => state.user.userData[user].albums)
 

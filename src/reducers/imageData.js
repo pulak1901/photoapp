@@ -8,7 +8,7 @@ const initialState = {
 	hasMore: true
 }
 
-// fetches the current page (according to state) of image data
+// fetches the current page (based on state) of image data
 export const fetchImageData = createAsyncThunk('posts/fetchImageData', async (_, thunkAPI) => {
 	const start = thunkAPI.getState().imageData.page * 40
 	const response = await axios.get(`api/image?_start=${start}&_limit=40`)

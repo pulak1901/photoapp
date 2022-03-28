@@ -6,6 +6,10 @@ import { ImageModal } from '../components/ImageModal'
 import { ImageTile } from '../components/ImageTile'
 import { ALL_PHOTOS_ALBUM_NAME } from '../utility/constants'
 
+/* Album-specific page
+ * Album name is taken from url parameters
+ * Does not affect application state
+ */
 export function Album() {
 	let navigate = useNavigate()
 	const { name } = useParams()

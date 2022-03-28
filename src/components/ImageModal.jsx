@@ -5,6 +5,13 @@ import { userAddAlbumImage, userAlbumContainsImage, userRemoveAlbumImage } from 
 
 import './ImageModal.scss'
 
+/* Modal to display the currently selected image.
+ * Also displays list of albums and the user can add/remove the current image to/from any album
+ * Inputs:
+ *  - imageData => {url:, thumbnailUrl:, id:}
+ *  - showModal => boolean
+ *  - closeModal() => () => void
+ */
 export const ImageModal = (props) => {
 	const dispatch = useDispatch()
 

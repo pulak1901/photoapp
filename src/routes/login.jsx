@@ -6,6 +6,10 @@ import logo from '../logo.svg'
 import './login.scss'
 import { resetImageData } from '../services/imageDataService'
 
+/* Login page and homepage
+ * No input
+ * Changes user state
+ */
 export function Login() {
 	const navigate = useNavigate()
 	const dispatch = useDispatch()

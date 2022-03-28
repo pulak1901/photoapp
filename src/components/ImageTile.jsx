@@ -2,6 +2,11 @@ import { Card, Image } from "react-bootstrap"
 
 import './ImageTile.scss'
 
+/* Card-based image view
+ * Inputs:
+ *  - imageData => {url:, thumbnailUrl:, id:}
+ *  - onClick => onClick listener
+ */
 export function ImageTile(props) {
 	const imageData = props.image
 	const onClick = props.onClick

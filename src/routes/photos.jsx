@@ -6,6 +6,10 @@ import Dashboard from '../components/Dashboard'
 import { ImageModal } from '../components/ImageModal'
 import { ALL_PHOTOS_ALBUM_NAME } from '../utility/constants'
 
+/* Gallery route
+ * No inputs
+ * Does not affect application state
+ */
 export default function Photos() {
 	let navigate = useNavigate()
 	const [modalImageData, setModalImageData] = useState({})

@@ -5,6 +5,10 @@ import useInfiniteScroll from '../utility/useInfiniteScroll'
 import { Spinner } from 'react-bootstrap'
 import { downloadImageData } from '../services/imageDataService'
 
+/* Infinitely scrolling list of photos
+ * Inputs:
+ *  - onImageSelected(imageData) => imageData is { url: , thumbnailUrl: , id: }
+ */
 export function InfinitePhotosList(props) {
 	const dispatch = useDispatch()
 

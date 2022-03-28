@@ -3,6 +3,11 @@ import { Button, Modal } from 'react-bootstrap'
 import { useDispatch } from 'react-redux'
 import { userAddAlbum } from '../services/userService'
 
+/* Creates a new album according to user input
+ * Inputs: 
+ *  - showModal => boolean
+ *  - closeModal() => () => void
+ */
 export const NewAlbumModal = (props) => {
 	const dispatch = useDispatch()
 	const [input, setInput] = useState('')

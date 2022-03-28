@@ -11,6 +11,12 @@ import { Image } from 'react-bootstrap'
 
 import './Dashboard.scss'
 
+/* Dashboard view. Displays user information, list of albums, and whatever is passed in as a child to this component.
+ * Inputs:
+ *  - currAlbum => Album name-string
+ *  - onAlbumSelected => ('') => {}
+ *  - children => <></>
+ */
 export default function Dashboard(props) {
 	let navigate = useNavigate()
 	let dispatch = useDispatch()

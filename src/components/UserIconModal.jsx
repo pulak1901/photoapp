@@ -6,6 +6,11 @@ import { Avatars } from "../utility/userAvatars"
 
 import './UserIconModal.scss'
 
+/* Displays a list of user icons
+ * Inputs: 
+ *  - showModal => boolean
+ *  - closeModal() => () => void
+ */
 export const UserIconModal = (props) => {
 	const dispatch = useDispatch()
 

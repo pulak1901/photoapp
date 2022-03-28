@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-	currentUser: '',
+	currentUser: '', // TODO: might be worth storing currentUser as {name: '', albums: []}
 	userData: {}
 }
 
