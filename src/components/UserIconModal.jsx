@@ -14,11 +14,14 @@ import './UserIconModal.scss'
 export const UserIconModal = (props) => {
 	const dispatch = useDispatch()
 
+	const closeModal = props.closeModal
+	const showModal = props.showModal
+
 	const setAvatar = (idx) => {
 		userSetIcon(dispatch, idx)
-		props.closeModal()
+		closeModal()
 	}
-	return <Modal show={props.showModal} className="UserIconModal">
+	return <Modal show={showModal} className="UserIconModal">
 		<Modal.Body>
 			{Avatars.map((avatar, idx) => 
 				(<img src={avatar} onClick={() => setAvatar(idx)} alt="icon."/>)

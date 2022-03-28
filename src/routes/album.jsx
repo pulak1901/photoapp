@@ -12,6 +12,7 @@ import { ALL_PHOTOS_ALBUM_NAME } from '../utility/constants'
  */
 export function Album() {
 	let navigate = useNavigate()
+	
 	const { name } = useParams()
 	const userName = useSelector(state => state.user.currentUser)
 	const albumData = useSelector(state => state.user.userData[userName].albums[name])

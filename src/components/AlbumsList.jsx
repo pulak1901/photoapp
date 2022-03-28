@@ -22,7 +22,7 @@ export function AlbumsList(props) {
 	  	albumList.push(...Object.keys(albums))
   	const onAlbumSelected = (album) => props.onAlbumSelected(album)
   	const onAlbumDelete = (album) => props.onAlbumDelete(album)
-
+  	const onAlbumAdd = props.onAlbumAdd
   	const currentAlbum = props.currAlbum
 
 	// If user has albums, returns a header, buttons to navigate to and delete albums
@@ -78,7 +78,7 @@ export function AlbumsList(props) {
       			{albumButtonList()}
     		</div>
     
-    		<Button onClick={props.onAlbumAdd} className="AddAlbumButton" variant="light">
+    		<Button onClick={onAlbumAdd} className="AddAlbumButton" variant="light">
       			<div>
         			<img src="/assets/icons/add.svg" alt="Add icon." />
         			<p>Add new album</p>

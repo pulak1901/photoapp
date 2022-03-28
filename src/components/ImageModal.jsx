@@ -15,6 +15,8 @@ import './ImageModal.scss'
 export const ImageModal = (props) => {
 	const dispatch = useDispatch()
 
+	const showModal = props.showModal
+	const closeModal = props.closeModal
 	const imageData = props.imageData
 	const imageSrc = imageData.url
 
@@ -32,7 +34,7 @@ export const ImageModal = (props) => {
 		}
 	}
 
-	return <Modal show={props.showModal} className="ImageModal">
+	return <Modal show={showModal} className="ImageModal">
 		<Modal.Header>
 			<Modal.Title>{imageData.title}</Modal.Title>
 		</Modal.Header>
@@ -53,7 +55,7 @@ export const ImageModal = (props) => {
 			</ButtonGroup>
 		</Modal.Body>
 		<Modal.Footer>
-			<Button variant="secondary" onClick={() => props.closeModal()}>
+			<Button variant="secondary" onClick={closeModal}>
 				Close
 			</Button>
 		</Modal.Footer>

@@ -25,6 +25,9 @@ export default function Dashboard(props) {
 	const [ showUserIconModal, setShowUserIconModal ] = useState(false)
 	const [ showNewAlbumModal, setShowNewAlbumModal ] = useState(false)
 
+	const onAlbumSelected = props.onAlbumSelected
+	const currAlbum = props.currAlbum
+
 	function button_logout(e) {
 		userLogout(dispatch)
 		navigate('/')
@@ -48,7 +51,7 @@ export default function Dashboard(props) {
 				</div>
 			</div>
 
-			<AlbumsList currAlbum={props.currAlbum} onAlbumSelected={props.onAlbumSelected} onAlbumAdd={() => setShowNewAlbumModal(true)} onAlbumDelete={onAlbumDelete} />
+			<AlbumsList currAlbum={currAlbum} onAlbumSelected={onAlbumSelected} onAlbumAdd={() => setShowNewAlbumModal(true)} onAlbumDelete={onAlbumDelete} />
 
 			<div className='DashboardContentPane'>
 				{props.children}

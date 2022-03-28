@@ -14,6 +14,8 @@ export function InfinitePhotosList(props) {
 
 	const { imageData, isFetching, hasMore } = useSelector(state => state.imageData)
 
+	const onImageSelected = props.onImageSelected
+
 	const loadMoreItems = useCallback(() => {
 		downloadImageData(dispatch)
 	}, [dispatch])
@@ -21,7 +23,7 @@ export function InfinitePhotosList(props) {
 	const createImgFromData = (item, index) => {
 		return <ImageTile
 			image={item}
-			onClick={() => {props.onImageSelected(item)}}
+			onClick={() => {onImageSelected(item)}}
 		/>
 	}
 
